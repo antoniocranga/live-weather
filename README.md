@@ -24,7 +24,7 @@ Execute the project
 
 ## Screenshots
 <p float="left">
-<img src = "IMG_5462.png" width = 300>
-<img src = "IMG_5463.png" width = 300>
-<img src = "IMG_5464.png" width = 300>
+<img src = "https://github.com/antoniocranga/live-weather/blob/master/IMG_5462.PNG" width = 300>
+<img src = "https://github.com/antoniocranga/live-weather/blob/master/IMG_5463.PNG" width = 300>
+<img src = "https://github.com/antoniocranga/live-weather/blob/master/IMG_5464.PNG" width = 300>
 </p>
