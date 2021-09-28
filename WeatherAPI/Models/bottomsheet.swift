@@ -59,7 +59,7 @@ self.isOpen = value.translation.height < 0
 }
 struct BottomSheetView_Previews: PreviewProvider {
 static var previews: some View {
-BottomSheetView(isOpen: .constant(false), maxHeight: 600) {
+BottomSheetView(isOpen: .constant(false), maxHeight: 500) {
 Rectangle().fill(Color.red)
         }.edgesIgnoringSafeArea(.all)
     }

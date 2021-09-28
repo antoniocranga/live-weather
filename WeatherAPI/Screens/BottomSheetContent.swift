@@ -8,13 +8,17 @@
 import SwiftUI
 
 struct BottomSheetContent: View {
+    @State var selectedIndex : Int = 0;
     @EnvironmentObject var weatherManager : WeatherManager
     var body: some View {
         VStack(){
-            weatherRow(forecast: WeatherManager.dummyWeather.forecast.forecastday)
-            
-            
-        }.background(Color(UIColor.tertiarySystemBackground))
+            weatherRow(forecast: WeatherManager.dummyWeather.forecast.forecastday,selectedIndex: selectedIndex,callback: self.callback)
+            hoursWidget(hours: weatherManager.weather?.forecast.forecastday[selectedIndex].hour ?? [])
+            }.background(Color(UIColor.tertiarySystemBackground))
+    }
+    func callback(_ value : Int)->Void
+    {
+        selectedIndex = value;
     }
 }
 /*if(weatherManager.weather != nil)

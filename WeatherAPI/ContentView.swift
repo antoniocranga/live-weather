@@ -36,7 +36,7 @@ struct ContentView: View {
                     BottomSheetView(
                         
                         isOpen: self.$bottomSheetShown,
-                        maxHeight: geometry.size.height * 0.9
+                        maxHeight: geometry.size.height * 0.8
                     ) {
                         BottomSheetContent().environmentObject(manager)
                     }.ignoresSafeArea()

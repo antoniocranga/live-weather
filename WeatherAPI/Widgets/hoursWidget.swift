@@ -10,27 +10,31 @@ import SwiftUI
 struct hoursWidget: View {
     let hours : [Hour]
     var body: some View {
-        ScrollView(.horizontal)
+        ScrollView(.vertical)
         {
-            HStack(){
+            VStack(){
+                if(hours.count > 0){
                 ForEach(0...(hours.count - 1), id : \.self)
                 {
                     index in
                     
                     let hour : Hour = hours[index]
-                    VStack()
+                    HStack()
                     {
                         
                         Text(hour.time.getHourFromString())
+                        Spacer()
                         RemoteImage(url: URL(string: "https:\(hour.condition.icon)")).aspectRatio(contentMode: .fill)
-                            .frame(width: 40, height: 40, alignment: .center)
+                            .frame(width: 30, height: 30, alignment: .center)
+                        Text("\(hour.temp_c.removeTrailingZero())°C").font(.headline)
                         
-                        Text("\(hour.temp_c.removeTrailingZero()) °").font(.headline)
-                    }.padding()
+                    }.padding(.top).padding(.bottom)
+                    Divider()
+                }
+                   
                 }
                 
-                
-            }.padding(.leading)
+            }.padding()
         }
     }
 }
