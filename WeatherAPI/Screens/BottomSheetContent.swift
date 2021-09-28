@@ -12,7 +12,7 @@ struct BottomSheetContent: View {
     @EnvironmentObject var weatherManager : WeatherManager
     var body: some View {
         VStack(){
-            weatherRow(forecast: WeatherManager.dummyWeather.forecast.forecastday,selectedIndex: selectedIndex,callback: self.callback)
+            weatherRow(forecast: weatherManager.weather?.forecast.forecastday ?? [],selectedIndex: selectedIndex,callback: self.callback)
             hoursWidget(hours: weatherManager.weather?.forecast.forecastday[selectedIndex].hour ?? [])
             }.background(Color(UIColor.secondarySystemBackground))
     }
