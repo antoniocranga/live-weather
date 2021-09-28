@@ -14,7 +14,7 @@ struct BottomSheetContent: View {
         VStack(){
             weatherRow(forecast: WeatherManager.dummyWeather.forecast.forecastday,selectedIndex: selectedIndex,callback: self.callback)
             hoursWidget(hours: weatherManager.weather?.forecast.forecastday[selectedIndex].hour ?? [])
-            }.background(Color(UIColor.tertiarySystemBackground))
+            }.background(Color(UIColor.secondarySystemBackground))
     }
     func callback(_ value : Int)->Void
     {
